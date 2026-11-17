@@ -22,7 +22,7 @@ original SwinMTL authors and paper are credited below; the modifications above
 are described in the EvidMTL paper.
 
 Model checkpoints are hosted separately on
-[Hugging Face](https://huggingface.co/rohitmenon86/evidmtl_dc):
+[Hugging Face](https://huggingface.co/rohitmenon86/evidmtl):
 
 - `silog_klmuprior_alpha1.01_gamma0.001_betacalc_final_model.ckpt` uses a
   noisy ground-truth mean prior.
@@ -103,7 +103,7 @@ To get started, follow these steps:
 To run the testing for the project, follow the below steps:
 
 1. Download the required EvidMTL checkpoint from the
-   [Hugging Face model repository](https://huggingface.co/rohitmenon86/evidmtl_dc).
+   [Hugging Face model repository](https://huggingface.co/rohitmenon86/evidmtl).
 
 2. Move Pretrained Models:
     - Create a `weights` directory and place the EvidMTL checkpoint there.
