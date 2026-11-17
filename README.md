@@ -4,6 +4,23 @@ EvidMTL extends SwinMTL with evidential depth estimation and semantic
 segmentation. This public release corresponds to the pre-depth-completion
 `wonka` source snapshot used by the combined Evidential Mapping project.
 
+## What is new in EvidMTL
+
+Relative to the upstream
+[SwinMTL](https://github.com/PardisTaghavi/SwinMTL) architecture, this work
+adds:
+
+- evidential heads for joint semantic segmentation and monocular depth;
+- semantic and depth uncertainty estimates alongside the task predictions;
+- an evidential SiLog depth objective with uncertainty regularization and a
+  Normal-Inverse-Gamma prior; and
+- the model outputs used by EvidKimera for uncertainty-aware semantic TSDF
+  fusion.
+
+SwinMTL remains the underlying shared encoder-decoder architecture. The
+original SwinMTL authors and paper are credited below; the modifications above
+are described in the EvidMTL paper.
+
 Model checkpoints are hosted separately on
 [Hugging Face](https://huggingface.co/rohitmenon86/evidmtl_dc):
 
@@ -13,6 +30,29 @@ Model checkpoints are hosted separately on
   ground-truth mean directly as the prior.
 
 The source code remains licensed under GPL-3.0; see [LICENSE](LICENSE).
+
+## Citation and attribution
+
+If you use this repository, please cite both EvidMTL and the upstream SwinMTL
+paper:
+
+```bibtex
+@inproceedings{menon2025evidmtl,
+  author={Menon, Rohit and Dengler, Nils and Pan, Sicong and Chenchani, Gokul Krishna and Bennewitz, Maren},
+  title={EvidMTL: Evidential Multi-Task Learning for Uncertainty-Aware Semantic Surface Mapping from Monocular RGB Images},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2025},
+  doi={10.1109/IROS60139.2025.11247528}
+}
+
+@inproceedings{taghavi2024swinmtl,
+  author={Taghavi, Pardis and Langari, Reza and Pandey, Gaurav},
+  title={SwinMTL: A Shared Architecture for Simultaneous Depth Estimation and Semantic Segmentation from Monocular Camera Images},
+  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2024},
+  url={https://arxiv.org/abs/2403.10662}
+}
+```
 
 ## SwinMTL
 
