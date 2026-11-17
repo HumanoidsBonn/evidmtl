@@ -1,0 +1,38 @@
+exp_name: "vanilla_ce_silog"
+gpu_or_cpu: "gpu:0"
+data_path: "/home/user/menon/workspace/data/nyuv2_dataset"
+dataset: "nyudepthv2labels22scannet_mod"
+num_classes: 23
+batch_size: 4
+workers: 6
+max_depth: 10.0
+max_depth_eval: 11.0
+min_depth_eval: 0.0001
+backbone: "swin_base_v2"
+pretrained: ""
+window_size: [30, 30, 30, 15]
+pretrain_window_size: [12, 12, 12, 6]
+use_shift: [true, true, false, false]
+depths: [2, 2, 18, 2]
+drop_path_rate: 0.3
+use_checkpoint: false
+num_deconv: 3
+num_filters: [32, 32, 32]
+deconv_kernels: [2, 2, 2]
+shift_window_test: true
+shift_size: 2
+flip_test: true
+epochs: 500
+max_lr: 2e-4
+min_lr: 2e-5
+weight_decay: 0.05
+layer_decay: 0.9
+crop_h: 448
+crop_w: 608
+log_dir: "./logs"
+val_freq: 10
+pro_bar: false
+save_freq: 1
+print_freq: 100
+save_model: true
+auto_resume: true

@@ -1,0 +1,8 @@
+wandb/*
+model_zoo/*
+logs/*
+**/__pycache__/*
+**/*.pyc
+ckpt/best_vanilla_swinmtl_nyuv2labels13_small_traced.pt
+check_pretrained.py
+weights/*
